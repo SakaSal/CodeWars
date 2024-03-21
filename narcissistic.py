@@ -17,3 +17,36 @@ This may be True and False in your language, e.g. PHP.
 
 Error checking for text strings or other invalid inputs is not
 required, only valid positive non-zero integers will be passed into the function.'''
+
+num1 = 9474
+num2 = 153
+
+a = 3**3
+print(a)
+
+def Narcissistic(num):
+    numstr = str(num)
+    power = len(numstr)
+    proof = 0
+
+    for i in numstr:
+        proof += int(i)**power
+    if proof==num:
+        return True
+    else:
+        return False
+
+# this is a more elegant solution
+    
+def niceNarcissistic(num):
+    numstr = str(num)
+    power = len(numstr)
+    proof = 0
+
+    for i in numstr:
+        proof += int(i)**power
+    
+    return proof==num
+
+istrue = Narcissistic(num1)
+print(istrue)
