@@ -2,19 +2,16 @@
 IPs should be considered valid if they consist of four octets, 
 with values between 0 and 255, inclusive.'''
 
-string ="0"
+string ="192.168.23.31"
 def is_valid_IP(string):
     splitString = string.split(".")
     for oct in splitString:
-        print(oct)
         if len(splitString) != 4:
             return False
-        print(len(oct))
         if oct[0] == "0" and len(oct) >= 2:
             return False
         if oct.isnumeric():
             if int(oct) > 255:
-                print("big")
                 return False
         else:
             return False
