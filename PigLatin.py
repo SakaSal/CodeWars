@@ -7,11 +7,13 @@ pig_it('Pig latin is cool') # igPay atinlay siay oolcay
 pig_it('Hello world !')     # elloHay orldway !
 '''
 text='Pig latin is cool'
-splitText = text.split(' ')
-print(splitText)
 
 def pig_it(text):
     splitText = text.split(' ')
-    print(splitText[0][0])
-
+    igpay=[]
+    for word in splitText:
+        word= word+word[0]+'ay'
+        word = word[1:]
+        igpay.append(word)
+    print(igpay)
 pig_it(text)
