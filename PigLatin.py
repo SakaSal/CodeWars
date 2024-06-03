@@ -14,6 +14,7 @@ def pig_it(text):
     for word in splitText:
         word = word+word[0]+'ay'
         word = word[1:]
+        
         igpay.append(word)
     return(' '.join(igpay))
 
