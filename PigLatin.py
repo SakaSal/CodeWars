@@ -10,10 +10,12 @@ text='Pig latin is cool'
 
 def pig_it(text):
     splitText = text.split(' ')
-    igpay=[]
+    igpay = []
     for word in splitText:
-        word= word+word[0]+'ay'
+        word = word+word[0]+'ay'
         word = word[1:]
         igpay.append(word)
-    print(igpay)
-pig_it(text)
+    return(' '.join(igpay))
+
+phrase = pig_it(text)
+print (phrase)
